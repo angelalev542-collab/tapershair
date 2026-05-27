@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us – Taper's Hairdressers</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <div class="page-hero">
+    <p class="breadcrumb"><a href="index.html">Home</a> / Contact us</p>
+    <h1>Contact <em style="font-style:italic;color:var(--gold)">Us</em></h1>
+  </div>
+
+  <section class="contact">
+    <div class="section-inner">
+      <div class="contact-grid">
+        <div>
+          <div class="section-label">Get In Touch</div>
+          <h2 class="section-title">We'd Love to<br><em>Hear From You</em></h2>
+          <div class="contact-cards">
+            <div class="contact-card">
+              <h4>Call Us</h4>
+              <p><a href="tel:0295992999">+61 2 9599 2999</a></p>
+            </div>
+            <div class="contact-card">
+              <h4>Hours</h4>
+              <p>Mon–Sat<br>9:00am – 5:30pm</p>
+            </div>
+            <div class="contact-card" style="grid-column:span 2;">
+              <h4>Our Location</h4>
+              <p>32 Slade Rd, Bardwell Park NSW 2207, Australia</p>
+            </div>
+          </div>
+          <h4 style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--dark);margin-bottom:16px;">Our Channels</h4>
+          <div class="contact-socials">
+            <a href="https://www.facebook.com/p/Tapers-Hairdressers-100066510674275/" target="_blank" class="social-link">f</a>
+            <a href="https://www.instagram.com/tapershair/" target="_blank" class="social-link">in</a>
+            <a href="https://x.com/tapershair" target="_blank" class="social-link">𝕏</a>
+          </div>
+        </div>
+        <div>
+          <div class="section-label">Message Us</div>
+          <h2 class="section-title">Leave Us A <em>Message</em></h2>
+          <div id="form-success" class="form-success">Thank you! We'll be in touch shortly.</div>
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name">
+            </div>
+            <div class="form-field">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="How can we help you?"></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="map-section">
+    <iframe
+      src="https://maps.google.com/maps?q=32%20Slade%20Rd%2C%20Bardwell%20Park%20NSW%202207%2C%20Australia&t=m&z=15&output=embed&iwloc=near"
+      title="Taper's Hairdressers location"
+      aria-label="Map showing Taper's Hairdressers at 32 Slade Rd, Bardwell Park NSW 2207"
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <div id="site-footer"></div>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('site-header').innerHTML = getHeader('Contact us');
+    document.getElementById('site-footer').innerHTML = getFooter();
+    initHamburger();
+
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      if (!email) return;
+      this.style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
