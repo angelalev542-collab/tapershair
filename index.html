@@ -5,11 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Taper's Hairdressers – Award Winning Salon | Bardwell Park</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .service-img img { width:100%; height:200px; object-fit:cover; display:block; }
+    .about-image-inner img { width:100%; height:100%; object-fit:cover; }
+    .gallery-item-inner img { width:100%; height:100%; object-fit:cover; }
+  </style>
 </head>
 <body>
   <div id="site-header"></div>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-pattern"></div>
@@ -22,34 +26,20 @@
         <a href="services.html" class="btn-outline">Our Services</a>
       </div>
       <div class="hero-stats">
-        <div class="stat-item">
-          <div class="stat-num">35+</div>
-          <div class="stat-label">Years of excellence</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">4.9★</div>
-          <div class="stat-label">Google rating</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">25+</div>
-          <div class="stat-label">Five-star reviews</div>
-        </div>
+        <div class="stat-item"><div class="stat-num">35+</div><div class="stat-label">Years of excellence</div></div>
+        <div class="stat-item"><div class="stat-num">4.8★</div><div class="stat-label">Google rating</div></div>
+        <div class="stat-item"><div class="stat-num">25+</div><div class="stat-label">Five-star reviews</div></div>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT PREVIEW -->
   <section class="about">
     <div class="section-inner">
       <div class="about-grid">
         <div class="about-image-wrap">
           <div class="about-image-placeholder">
             <div class="about-image-inner">
-              <img src="images/Shop.jpg" alt="Salon" style="width:100%;height:100%;object-fit:cover;display:block;">
-              <div class="about-badge">
-                <strong>1989</strong>
-                Founded in Bardwell Park
-              </div>
+              <img src="images/Shop.jpg" alt="Taper's Hairdressers salon interior">
             </div>
           </div>
           <div class="about-accent"></div>
@@ -74,7 +64,6 @@
     </div>
   </section>
 
-  <!-- SERVICES PREVIEW -->
   <section class="services">
     <div class="section-inner">
       <div class="services-header">
@@ -86,46 +75,39 @@
       </div>
       <div class="services-grid">
         <div class="service-card">
-          <div class="service-img" style="background-image:url('images/Haircuts.jpg')"></div>
-          <div class="service-num">01</div>
+          <div class="service-img"><img src="images/Haircuts.jpg" alt="Haircuts"></div>
           <h3>Haircuts</h3>
           <p>From elegant layers to chic bobs, we create styles that reflect your personality. Classic, trendy, or a bit of both — our stylists ensure you look sharp and stylish.</p>
         </div>
         <div class="service-card">
-          <div class="service-img" style="background-image:url('images/Hair%20Coluring.jpg')"></div>
-          <div class="service-num">02</div>
+          <div class="service-img"><img src="images/Hair Coluring.jpg" alt="Hair Colouring"></div>
           <h3>Hair Colouring</h3>
           <p>Transform your look with our professional colouring services. Whether you're looking for a subtle change or a bold new colour, our expert colourists will achieve the perfect shade.</p>
         </div>
         <div class="service-card">
-          <div class="service-img" style="background-image:url('images/Hair%20Rejuvenation.jpg')"></div>
-          <div class="service-num">03</div>
+          <div class="service-img"><img src="images/Hair Rejuvenation.jpg" alt="Hair Rejuvenation"></div>
           <h3>Hair Rejuvenation</h3>
-          <p>Revitalise your hair with our advanced rejuvenation treatments, designed to restore shine, strength, and health. Experience the difference with our nourishing solutions.</p>
+          <p>Revitalise your hair with our advanced rejuvenation treatments, designed to restore shine, strength, and health.</p>
         </div>
         <div class="service-card">
-          <div class="service-img" style="background-image:url('images/Wash%20%26%20Blow%20Dry.jpg')"></div>
-          <div class="service-num">04</div>
+          <div class="service-img"><img src="images/Wash & Blow Dry.jpg" alt="Wash and Blow Dry"></div>
           <h3>Wash &amp; Blow Dry</h3>
-          <p>Enjoy a luxurious wash and blow dry that leaves your hair feeling fresh and looking fabulous. Our expert stylists give you a smooth, polished finish perfect for any occasion.</p>
+          <p>Enjoy a luxurious wash and blow dry that leaves your hair feeling fresh and looking fabulous.</p>
         </div>
         <div class="service-card">
-          <div class="service-img" style="background-image:url('images/Hair%20Styling.jpg')"></div>
-          <div class="service-num">05</div>
+          <div class="service-img"><img src="images/Hair Styling.jpg" alt="Hair Styling"></div>
           <h3>Hair Styling</h3>
-          <p>Our expert stylists create the perfect look for any occasion. From sleek and sophisticated to voluminous and glamorous, we tailor services to your personal style.</p>
+          <p>Our expert stylists create the perfect look for any occasion. From sleek and sophisticated to voluminous and glamorous.</p>
         </div>
         <div class="service-card">
-          <div class="service-img" style="background-image:url('images/Weddings.jpg')"></div>
-          <div class="service-num">06</div>
+          <div class="service-img"><img src="images/Weddings.jpg" alt="Wedding Hair"></div>
           <h3>Weddings</h3>
-          <p>Make your special day unforgettable with our exquisite wedding styling services. Our talented stylists will create a beautiful, personalised look that complements your wedding theme.</p>
+          <p>Make your special day unforgettable with our exquisite wedding styling services.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- GALLERY -->
   <section class="gallery">
     <div class="section-inner">
       <div class="gallery-header">
@@ -133,20 +115,15 @@
         <h2 class="section-title">Our Gallery</h2>
       </div>
       <div class="gallery-grid">
-        <div class="gallery-item" style="background-image:url('images/Haircuts.jpg')">
-          <div class="gallery-item-inner">
-            <div class="gallery-overlay"></div>
-          </div>
-        </div>
-        <div class="gallery-item" style="background-image:url('images/Hair%20Coluring.jpg')"><div class="gallery-item-inner"><div class="gallery-overlay"></div></div></div>
-        <div class="gallery-item" style="background-image:url('images/Hair%20Rejuvenation.jpg')"><div class="gallery-item-inner"><div class="gallery-overlay"></div></div></div>
-        <div class="gallery-item" style="background-image:url('images/Hair%20Styling.jpg')"><div class="gallery-item-inner"><div class="gallery-overlay"></div></div></div>
-        <div class="gallery-item" style="background-image:url('images/Weddings.jpg')"><div class="gallery-item-inner"><div class="gallery-overlay"></div></div></div>
+        <div class="gallery-item"><div class="gallery-item-inner"><img src="images/Shop.jpg" alt="Salon"></div></div>
+        <div class="gallery-item"><div class="gallery-item-inner"><img src="images/Haircuts.jpg" alt="Haircuts"></div></div>
+        <div class="gallery-item"><div class="gallery-item-inner"><img src="images/Hair Coluring.jpg" alt="Hair Colour"></div></div>
+        <div class="gallery-item"><div class="gallery-item-inner"><img src="images/Hair Styling.jpg" alt="Styling"></div></div>
+        <div class="gallery-item"><div class="gallery-item-inner"><img src="images/Weddings.jpg" alt="Weddings"></div></div>
       </div>
     </div>
   </section>
 
-  <!-- REVIEWS -->
   <section class="reviews">
     <div class="section-inner">
       <div class="reviews-header">
@@ -159,23 +136,17 @@
       </div>
       <div class="reviews-grid">
         <div class="review-card">
-          <div class="review-stars">
-            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-          </div>
+          <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
           <p class="review-text">"I have been going to this place for years. I have ALWAYS been really happy. I made the mistake of getting my cut at a different place once, and I'll never be unfaithful again. I highly recommend seeing the girls at Tapers."</p>
           <div class="review-author">Michele Courtney</div>
         </div>
         <div class="review-card">
-          <div class="review-stars">
-            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-          </div>
+          <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
           <p class="review-text">"Ladies are brilliant in there — been going to them for over 18 months. Always leave looking and feeling fantastic."</p>
           <div class="review-author">Caz</div>
         </div>
         <div class="review-card">
-          <div class="review-stars">
-            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-          </div>
+          <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
           <p class="review-text">"First time there, Shanelle coloured, cut and blow-dried my hair and it's the best colour and cut I've had. She was professional and very nice too. I'll be going back there from now on."</p>
           <div class="review-author">Bernadette McLellan</div>
         </div>
@@ -183,12 +154,10 @@
     </div>
   </section>
 
-  <!-- CTA -->
   <section class="cta-section">
     <div class="section-inner">
       <div class="section-label" style="justify-content:center;color:var(--gold)">
-        <span style="display:block;width:30px;height:1px;background:var(--gold)"></span>
-        Connect With Us
+        <span style="display:block;width:30px;height:1px;background:var(--gold)"></span>Connect With Us
       </div>
       <h2 class="section-title">Not sure what you want?</h2>
       <p>Book a consultation with one of our stylists. We'll discuss your hair goals and recommend the best services to achieve your desired look.</p>
@@ -197,7 +166,6 @@
   </section>
 
   <div id="site-footer"></div>
-
   <script src="js/main.js"></script>
   <script>
     document.getElementById('site-header').innerHTML = getHeader('Home');
@@ -207,6 +175,3 @@
   </script>
 </body>
 </html>
-< ! - -   u p d a t e d   - - > 
- 
- 
