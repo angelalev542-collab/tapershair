@@ -13,7 +13,7 @@ function getHeader(activePage) {
   return `
   <div class="top-bar">
     <div class="top-bar-inner">
-      <span>📍 32 Slade Rd, Bardwell Park NSW 2207 &nbsp;|&nbsp; <a href="tel:0295992999">+61 2 9599 2999</a> &nbsp;|&nbsp; Mon–Sat 9:00–17:30</span>
+      <span>📍 32 Slade Rd, Bardwell Park NSW 2207 &nbsp;|&nbsp; <a href="tel:0295992999">(02) 9599 2999</a> &nbsp;|&nbsp; Tue, Wed, Fri 9:00–17:30; Thu 9:00–21:00; Sat 8:00–16:00</span>
       <div class="socials">
         <a href="https://www.facebook.com/p/Tapers-Hairdressers-100066510674275/" target="_blank">Facebook</a>
         <a href="https://www.instagram.com/tapershair/" target="_blank">Instagram</a>
@@ -55,15 +55,15 @@ function getFooter() {
           <li><a href="about.html">About us</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Contact us</a></li>
-          <li><a href="${BOOK_URL}" target="_blank">Book appointment</a></li>
+          <li><a href="${BOOK_URL}" target="_blank" class="booking-link">Book appointment</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h5>Phone number</h5>
-        <p><a href="tel:0295992999" style="color:var(--gold);text-decoration:none;">+61 2 9599 2999</a></p>
+        <p><a href="tel:0295992999" style="color:var(--gold);text-decoration:none;">(02) 9599 2999</a></p>
         <br>
         <h5>Hours</h5>
-        <p>Mon–Sat: 9:00am – 5:30pm</p>
+        <p>Tue, Wed, Fri: 9:00am – 5:30pm<br>Thu: 9:00am – 9:00pm<br>Sat: 8:00am – 4:00pm</p>
       </div>
       <div class="footer-col">
         <h5>Address</h5>
@@ -83,6 +83,21 @@ function initHamburger() {
   if (btn && nav) {
     btn.addEventListener('click', () => nav.classList.toggle('open'));
   }
+}
+
+function initBookingLinks() {
+  document.querySelectorAll('.booking-link').forEach(link => {
+    if (link.dataset.bookingBound === 'true') return;
+
+    link.href = BOOK_URL;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.open(BOOK_URL, '_blank', 'noopener,noreferrer');
+    });
+    link.dataset.bookingBound = 'true';
+  });
 }
 
 function initAnimations() {

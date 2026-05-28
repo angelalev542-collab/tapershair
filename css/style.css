@@ -568,14 +568,25 @@ section { padding: 100px 0; }
   text-align: center;
   position: relative;
   overflow: hidden;
+  z-index: 0;
 }
 .cta-section::before {
   content: '';
   position: absolute;
   inset: 0;
   opacity: 0.03;
+  pointer-events: none;
+  z-index: 0;
   background-image: repeating-linear-gradient(45deg, var(--gold) 0, var(--gold) 1px, transparent 0, transparent 50%);
   background-size: 20px 20px;
+}
+.cta-section .section-inner,
+.cta-section .section-label,
+.cta-section .section-title,
+.cta-section p,
+.cta-section .btn-primary {
+  position: relative;
+  z-index: 1;
 }
 .cta-section .section-title { color: var(--white); }
 .cta-section p { color: rgba(255,255,255,0.5); max-width: 500px; margin: 0 auto 40px; font-size: 15px; line-height: 1.8; }
