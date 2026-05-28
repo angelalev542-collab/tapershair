@@ -810,7 +810,9 @@ footer {
 .about-image-2 {
   width: 100%;
   aspect-ratio: 4/5;
-  background: linear-gradient(160deg, var(--cream-mid) 0%, #c8b89a 100%);
+  background-image: url("../about us images/about us.heic");
+  background-size: cover;
+  background-position: center;
   border-radius: 2px;
   position: relative;
 }
