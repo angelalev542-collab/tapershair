@@ -45,6 +45,7 @@ body {
 .top-bar a { color: var(--gold); text-decoration: none; }
 .top-bar .socials { display: flex; gap: 16px; }
 .top-bar .socials a:hover { color: var(--white); }
+nav .socials { display: flex; gap: 16px; align-items: center; }
 
 /* ── HEADER ── */
 header {

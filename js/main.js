@@ -14,11 +14,6 @@ function getHeader(activePage) {
   <div class="top-bar">
     <div class="top-bar-inner">
       <span>📍 32 Slade Rd, Bardwell Park NSW 2207 &nbsp;|&nbsp; <a href="tel:0295992999">(02) 9599 2999</a> &nbsp;|&nbsp; Tue, Wed, Fri 9:00am–5:30pm; Thu 9:00am–9:00pm; Sat 8:00am–4:00pm</span>
-      <div class="socials">
-        <a href="https://www.facebook.com/p/Tapers-Hairdressers-100066510674275/" target="_blank">Facebook</a>
-        <a href="https://www.instagram.com/tapershair/" target="_blank">Instagram</a>
-        <a href="https://x.com/tapershair" target="_blank">X</a>
-      </div>
     </div>
   </div>
   <header>
@@ -26,6 +21,10 @@ function getHeader(activePage) {
       <a href="index.html" class="logo">Taper<span>'s</span></a>
       <nav id="main-nav">
         ${navLinks}
+        <div class="socials">
+          <a href="https://www.facebook.com/p/Tapers-Hairdressers-100066510674275/" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://www.instagram.com/tapershairdressing/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
         <a href="${BOOK_URL}" target="_blank" class="btn-book">Book Now</a>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -44,8 +43,7 @@ function getFooter() {
         <p class="footer-desc">Award winning salon and colour experts, serving Bardwell Park and surrounds since 1989. Where creativity meets craftsmanship in every snip.</p>
         <div class="footer-socials">
           <a href="https://www.facebook.com/p/Tapers-Hairdressers-100066510674275/" target="_blank" class="footer-social">f</a>
-          <a href="https://www.instagram.com/tapershair/" target="_blank" class="footer-social">in</a>
-          <a href="https://x.com/tapershair" target="_blank" class="footer-social">𝕏</a>
+          <a href="https://www.instagram.com/tapershairdressing/" target="_blank" class="footer-social">in</a>
         </div>
       </div>
       <div class="footer-col">
