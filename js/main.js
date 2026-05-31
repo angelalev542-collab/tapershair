@@ -22,8 +22,8 @@ function getHeader(activePage) {
       <nav id="main-nav">
         ${navLinks}
         <div class="socials">
-          <a href="https://www.facebook.com/p/Tapers-Hairdressers-100066510674275/" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a href="https://www.instagram.com/tapershairdressing/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.facebook.com/tapershair" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://www.instagram.com/tapershairdressers" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
         <a href="${BOOK_URL}" target="_blank" class="btn-book">Book Now</a>
       </nav>
@@ -42,8 +42,8 @@ function getFooter() {
         <div class="footer-logo">Taper<span>'s</span> Hairdressers</div>
         <p class="footer-desc">Award winning salon and colour experts, serving Bardwell Park and surrounds since 1989. Where creativity meets craftsmanship in every snip.</p>
         <div class="footer-socials">
-          <a href="https://www.facebook.com/p/Tapers-Hairdressers-100066510674275/" target="_blank" class="footer-social">f</a>
-          <a href="https://www.instagram.com/tapershairdressing/" target="_blank" class="footer-social">in</a>
+          <a href="https://www.facebook.com/tapershair" target="_blank" class="footer-social">f</a>
+          <a href="https://www.instagram.com/tapershairdressers" target="_blank" class="footer-social">in</a>
         </div>
       </div>
       <div class="footer-col">
