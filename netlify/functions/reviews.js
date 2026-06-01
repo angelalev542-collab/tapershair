@@ -17,6 +17,16 @@ exports.handler = async function (event) {
   const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${encodeURIComponent(PLACE_ID)}&fields=${FIELDS}&key=${encodeURIComponent(apiKey)}`;
 
   try {
+    if (typeof fetch === 'undefined') {
+      return {
+        statusCode: 500,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ error: 'Runtime fetch() not available.' }),
+      };
+    }
+
     const response = await fetch(url);
     const data = await response.json();
 
@@ -26,7 +36,7 @@ exports.handler = async function (event) {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ error: 'Google Places API error', details: data.status || response.statusText }),
+        body: JSON.stringify({ error: 'Google Places API error', details: data.error_message || data.status || response.statusText }),
       };
     }
 

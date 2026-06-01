@@ -113,10 +113,15 @@ function loadGoogleReviews() {
 
   fetch(REVIEW_FUNCTION_URL)
     .then((response) => {
-      if (!response.ok) {
-        throw new Error('Failed to load review data.');
-      }
-      return response.json();
+      return response.json().then((payload) => {
+        if (!response.ok) {
+          const details = payload && payload.error ? ` ${payload.error}${payload.details ? ': ' + payload.details : ''}` : '';
+          throw new Error(`Failed to load review data.${details}`);
+        }
+        return payload;
+      }).catch((err) => {
+        throw new Error(`Invalid response from review endpoint. ${err.message}`);
+      });
     })
     .then((data) => {
       const rating = Number(data.rating) || 0;
@@ -166,8 +171,8 @@ function loadGoogleReviews() {
       }
     })
     .catch((error) => {
-      console.error(error);
-      ratingText.textContent = 'Unable to load live Google reviews at this time.';
+      console.error('Google review load error:', error);
+      ratingText.textContent = `Unable to load live Google reviews at this time.${error.message ? ' ' + error.message : ''}`;
     });
 }
 
