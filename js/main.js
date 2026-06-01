@@ -98,6 +98,79 @@ function initBookingLinks() {
   });
 }
 
+const REVIEW_FUNCTION_URL = '/.netlify/functions/reviews';
+
+function loadGoogleReviews() {
+  const ratingText = document.getElementById('review-summary');
+  const heroRating = document.getElementById('hero-rating');
+  const heroReviewCount = document.getElementById('hero-review-count');
+  const reviewStars = document.getElementById('review-stars');
+  const reviewsGrid = document.getElementById('reviews-grid');
+
+  if (!ratingText || !heroRating || !heroReviewCount || !reviewStars || !reviewsGrid) {
+    return;
+  }
+
+  fetch(REVIEW_FUNCTION_URL)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Failed to load review data.');
+      }
+      return response.json();
+    })
+    .then((data) => {
+      const rating = Number(data.rating) || 0;
+      const totalRatings = Number(data.total_ratings) || 0;
+      const reviews = Array.isArray(data.reviews) ? data.reviews : [];
+      const ratingValue = Number.isInteger(rating) ? rating.toString() : rating.toFixed(1);
+
+      heroRating.textContent = `${ratingValue}★`;
+      heroReviewCount.textContent = `${totalRatings.toLocaleString()} reviews`;
+      ratingText.textContent = `${ratingValue} out of 5 — Based on ${totalRatings.toLocaleString()} Google reviews`;
+
+      reviewStars.innerHTML = Array.from({ length: 5 }, (_, i) => {
+        return `<span class="star">${i < Math.round(rating) ? '★' : '☆'}</span>`;
+      }).join('');
+
+      reviewsGrid.innerHTML = '';
+      if (reviews.length) {
+        reviews.slice(0, 5).forEach((review) => {
+          const card = document.createElement('div');
+          card.className = 'review-card';
+
+          const starLine = document.createElement('div');
+          starLine.className = 'review-stars';
+          starLine.innerHTML = Array.from({ length: 5 }, (_, i) => `<span class="star">${i < review.rating ? '★' : '☆'}</span>`).join('');
+
+          const textPara = document.createElement('p');
+          textPara.className = 'review-text';
+          textPara.textContent = review.text;
+
+          const authorDiv = document.createElement('div');
+          authorDiv.className = 'review-author';
+          authorDiv.textContent = review.author;
+
+          card.appendChild(starLine);
+          card.appendChild(textPara);
+          card.appendChild(authorDiv);
+          reviewsGrid.appendChild(card);
+        });
+      } else {
+        const emptyCard = document.createElement('div');
+        emptyCard.className = 'review-card';
+        const emptyText = document.createElement('p');
+        emptyText.className = 'review-text';
+        emptyText.textContent = 'No reviews are currently available. Please check back soon.';
+        emptyCard.appendChild(emptyText);
+        reviewsGrid.appendChild(emptyCard);
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+      ratingText.textContent = 'Unable to load live Google reviews at this time.';
+    });
+}
+
 function initAnimations() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('animate'); });
