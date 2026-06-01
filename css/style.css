@@ -199,6 +199,17 @@ nav a:hover::after, nav a.active::after { width: 100%; }
   gap: 16px;
   flex-wrap: wrap;
 }
+.hero-cta-main {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.hero-social-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  width: 100%;
+}
 .btn-primary {
   background: var(--gold);
   color: var(--dark);
