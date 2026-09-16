@@ -13,7 +13,7 @@ function getHeader(activePage) {
   return `
   <div class="top-bar">
     <div class="top-bar-inner">
-      <span>📍 32 Slade Rd, Bardwell Park NSW 2207 &nbsp;|&nbsp; <a href="tel:0295992999">(02) 9599 2999</a> &nbsp;|&nbsp; Tue, Wed, Fri 9:00am–5:30pm; Thu 9:00am–9:00pm; Sat 8:00am–4:00pm</span>
+      <span>📍 32 Slade Rd, Bardwell Park NSW 2207 &nbsp;|&nbsp; <a href="tel:0295992999">(02) 9599 2999</a> &nbsp;|&nbsp; Tue, Wed, Fri 9:00am–5:30pm; Thu 9:00am–9:00pm; Sat 8:00am–4:30pm</span>
     </div>
   </div>
   <header>
@@ -61,7 +61,7 @@ function getFooter() {
         <p><a href="tel:0295992999" style="color:var(--gold);text-decoration:none;">(02) 9599 2999</a></p>
         <br>
         <h5>Hours</h5>
-        <p>Tue, Wed, Fri: 9:00am – 5:30pm<br>Thu: 9:00am – 9:00pm<br>Sat: 8:00am – 4:00pm</p>
+        <p>Tue, Wed, Fri: 9:00am – 5:30pm<br>Thu: 9:00am – 9:00pm<br>Sat: 8:00am – 4:30pm</p>
       </div>
       <div class="footer-col">
         <h5>Address</h5>
